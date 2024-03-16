@@ -10,10 +10,10 @@ interface IProps {
     id: string;
     title: string;
     image: string;
-    price: number;
+    prise: number;
 }
 
-const CheckoutProduct = ({ id, title, image, price }: IProps) => {
+const CheckoutProduct = ({ id, title, image, prise }: IProps) => {
 
     const dispatch = useAppDispatch();
 
@@ -28,7 +28,7 @@ const CheckoutProduct = ({ id, title, image, price }: IProps) => {
             <Info>
                 <TitleContainer>
                     <Title>{title}</Title>
-                    <Price itemPrise={price} />
+                    <Price itemPrise={prise} />
                 </TitleContainer>
 
                 <AmazonButton onClick={() => removeFromBasket()}>
